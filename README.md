@@ -103,12 +103,12 @@ Based on your region, you will need to change the URLs in your scripts according
 ### .env File Configuration
 
 Your `.env` file should contain the following variables:
-client_id = "YOUR_CLIENT_ID"
-client_secret = "YOUR_CLIENT_SECRET"
-refresh_token = "YOUR_REFRESH_TOKEN"
-client = "YOUR_CLIENT_IDENTIFIER" # Or specific marketplace client string
-AWS_SQS_ARN = "YOUR_SQS_QUEUE_ARN" # The ARN you copied earlier
-DESTINATION_ID = "" # This will be obtained after running destinationId.py
+* client_id = "YOUR_CLIENT_ID"
+* client_secret = "YOUR_CLIENT_SECRET"
+* refresh_token = "YOUR_REFRESH_TOKEN"
+* client = "YOUR_CLIENT_IDENTIFIER" # Or specific marketplace client string
+* AWS_SQS_ARN = "YOUR_SQS_QUEUE_ARN" # The ARN you copied earlier
+* DESTINATION_ID = "" # This will be obtained after running destinationId.py
 
 
 ### Required Files
@@ -125,3 +125,9 @@ You will need the following Python files:
 1.  **Run `destinationId.py` first.** This script will output a `DESTINATION_ID`.
 2.  Take the `DESTINATION_ID` from the output and add it to your `.env` file.
 3.  **Then, run `order_notification.py`.**
+
+---
+
+**Successfully Completed!**
+
+If anything breaks or stops working, please go through the official documentation and make the necessary changes.
