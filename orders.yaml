@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  AWS CloudFormation Template to create a new SQS queue used to receive notifications from Notifications API.
+Parameters:
+  DestinationQueueName:
+    Type: String
+    Description: The name of the SQS queue to be created.
+Resources:
+  DestinationQueue:
+    Type: 'AWS::SQS::Queue'
+    Properties:
+      QueueName: !Ref DestinationQueueName
+  DestinationQueuePolicy:
+    Type: 'AWS::SQS::QueuePolicy'
+    Properties:
+      Queues:
+        - !Ref DestinationQueue
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowSPAPIAccess
+            Effect: Allow
+            Principal:
+              AWS: '437568002678'
+            Action:
+              - 'sqs:GetQueueAttributes'
+              - 'sqs:SendMessage'
+            Resource: !GetAtt
+              - DestinationQueue
+              - Arn

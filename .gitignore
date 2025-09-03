@@ -1,0 +1,28 @@
+# Bytecode cache
+__pycache__/
+
+# Env file
+.env
+
+# Python scripts
+del.py
+key.py
+pull_notification.py
+sqs_create_pipeline.py
+test.py
+test1.py
+test2.py
+
+# Excel files
+full_messages.xlsx
+orders.xlsx
+processed_orders_summary.xlsx
+processed_order_status_summary.xlsx
+processed_order_status_summary_with_safe_skus.xlsx
+structured_order_notifications.xlsx
+
+# Config and data files
+sqs_format.json
+
+# Log files
+sqs_order_notifications.log
