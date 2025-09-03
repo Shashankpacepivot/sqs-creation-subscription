@@ -19,28 +19,7 @@ This guide outlines the steps to set up an Amazon SQS queue and configure it to 
 We will use a CloudFormation template to create the necessary AWS resources.
 
 1. Create a file named `orders.yml`.
-2. Copy the following content into `orders.yml`:
-
-    ```yaml
-    # orders.yml content (You need to provide this content)
-    # Example (This is a placeholder, you'll need the actual YML content):
-    AWSTemplateFormatVersion: '2010-09-09'
-    Description: Creates an SQS queue for Amazon SP-API notifications.
-    Resources:
-      MySPAPISQSQueue:
-        Type: AWS::SQS::Queue
-        Properties:
-          QueueName: !Sub "${AWS::StackName}-SPAPIQueue"
-          VisibilityTimeout: 300
-    Outputs:
-      QueueARN:
-        Description: The ARN of the SQS queue
-        Value: !GetAtt MySPAPISQSQueue.Arn
-      QueueURL:
-        Description: The URL of the SQS queue
-        Value: !Ref MySPAPISQSQueue
-    ```
-    *(You need to replace the example content above with the actual `orders.yml` content you have.)*
+2. Copy the following content into `orders.yml`
 
 ### Step 2: Login to AWS Account
 
